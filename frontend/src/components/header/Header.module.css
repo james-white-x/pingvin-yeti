@@ -1,0 +1,74 @@
+/* Header.module.css */
+.root {
+  position: relative;
+  z-index: 1;
+}
+
+.dropdown {
+  position: absolute;
+  top: var(--header-height, 60px);
+  left: 0;
+  right: 0;
+  z-index: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-top-width: 0;
+  overflow: hidden;
+
+  @media (min-width: em(768px)) {
+    display: none;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.links {
+  @media (max-width: em(767px)) {
+    display: none;
+  }
+}
+
+.burger {
+  @media (min-width: em(768px)) {
+    display: none;
+  }
+}
+
+.link {
+  display: block;
+  line-height: 1;
+  padding: 8px 12px;
+  border-radius: var(--mantine-radius-sm);
+  text-decoration: none;
+  color: var(--mantine-color-gray-7);
+  font-size: var(--mantine-font-size-sm);
+  font-weight: 500;
+
+  &:hover {
+    background-color: var(--mantine-color-gray-0);
+  }
+
+  @media (max-width: em(767px)) {
+    border-radius: 0;
+    padding: var(--mantine-spacing-md);
+  }
+}
+
+:global([data-mantine-color-scheme="dark"]) .link {
+  color: var(--mantine-color-dark-0);
+
+  &:hover {
+    background-color: var(--mantine-color-dark-6);
+  }
+}
+
+.linkActive,
+.linkActive:hover {
+  background-color: var(--mantine-color-light);
+  color: var(--mantine-color-anchor);
+}
