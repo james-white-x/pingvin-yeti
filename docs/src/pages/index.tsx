@@ -1,6 +1,6 @@
 import React from 'react';
-import  { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 export default function Home() {
-  return <Redirect to='/pingvin-share/introduction' />;
+  return <Navigate to='/pingvin-share/introduction' replace />;
 }
