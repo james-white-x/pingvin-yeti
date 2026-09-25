@@ -6,6 +6,7 @@ node_modules
 # next.js
 /frontend/.next/
 /frontend/out/
+/frontend/public/img/
 
 # yarn
 yarn.lock
